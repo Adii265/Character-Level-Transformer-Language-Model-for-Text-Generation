@@ -23,7 +23,6 @@ This project implements a **Character-Level Transformer Language Model** designe
 ## Project Structure
 
 - `Dataset_NLP.txt`: Input text file containing the dataset on which the model will be trained.
-- `transformer_model.py`: Main code file implementing the character-level Transformer model.
 - `README.md`: This documentation file.
 
 ---
@@ -39,7 +38,7 @@ To run this project, you'll need the following dependencies:
 You can install the dependencies using the following command:
 
 ```bash
-pip install torch numpy
+pip install torch
 ```
 
 ---
@@ -68,22 +67,6 @@ The character-level transformer consists of:
 - **Multi-head Self-Attention Layers**: Allows the model to focus on different parts of the sequence when generating new characters, capturing long-range dependencies.
 - **Feedforward Layers**: Apply non-linear transformations to the data after the self-attention layers.
 - **Output Layer**: Produces a probability distribution over the entire vocabulary, representing the likelihood of each character being the next in the sequence.
-
----
-
-## Training the Model
-
-1. **Prepare the dataset**: Add your text data into the `Dataset_NLP.txt` file. The text data should be clean and formatted properly, as the model will learn patterns from this file.
-
-2. **Run the training script**:
-   - Execute the script `transformer_model.py` to begin training the model.
-   - The model will process the data in batches, calculate the loss, and backpropagate the gradients to adjust the weights.
-   
-   ```bash
-   python transformer_model.py
-   ```
-
-3. **Monitor training**: The script will periodically output the training and validation loss. You can modify parameters like batch size, number of iterations, or learning rate to improve the model's performance.
 
 ---
 
